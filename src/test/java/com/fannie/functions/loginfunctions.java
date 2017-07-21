@@ -10,17 +10,17 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class loginfunctions {
 	public static WebDriver driver;
 	static String baseURL = "https://github.com/";
-
+	//static String baseURL = "http://sdettraining.com/trguitransactions/default.aspx?id=new";
 	public static void driverIntitilization() {
 
-		//System.setProperty("webdriver.chrome.driver", "C:\\071717\\ALLJars\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\071717\\ALLJars\\chromedriver.exe");
 		
-		//driver = new ChromeDriver();
-		//driver = (WebDriver) new ChromeDriver();
+		driver = new ChromeDriver();
+//		driver = (WebDriver) new ChromeDriver();
 
-		System.setProperty("webdriver.chrome.driver",
-				System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\chromedriver.exe");
-		driver = (WebDriver) new ChromeDriver();
+//		System.setProperty("webdriver.chrome.driver",
+//				System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\chromedriver.exe");
+//		driver = (WebDriver) new ChromeDriver();
 		
 	}
 
@@ -33,9 +33,9 @@ public class loginfunctions {
 
 	}
 	
-	public void SignIn(){
+	public static void SignIn(){
 		
-		driver.findElement(By.xpath("html/body/div[1]/header/div/div/div/a[1]")).click();
+		driver.findElement(By.xpath("html/body/div[1]/header/div/div/div/span/div/a[1]")).click();
 		System.out.println("User clicked on Signin Link");
 		
 		

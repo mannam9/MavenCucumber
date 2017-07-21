@@ -17,9 +17,10 @@ public class login_step_definitions {
 
 	@When("^User clicks on the Signin link$")
 	public void user_clicks_on_the_Signin_link() throws Throwable {
-		loginfunctions si = new loginfunctions();
-		
-		si.SignIn();
+//		loginfunctions si = new loginfunctions();
+//		
+//		si.SignIn();
+		loginfunctions.SignIn();
 
 	}
 
