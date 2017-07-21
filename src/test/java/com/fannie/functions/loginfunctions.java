@@ -4,6 +4,8 @@ package com.fannie.functions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+//org/openqa/selenium/remote/RemoteWebDriver
 
 public class loginfunctions {
 	public static WebDriver driver;
@@ -11,11 +13,15 @@ public class loginfunctions {
 
 	public static void driverIntitilization() {
 
-		System.setProperty("webdriver.chrome.driver", "C:\\071717\\ALLJars\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "C:\\071717\\ALLJars\\chromedriver.exe");
 		
 		//driver = new ChromeDriver();
-		driver = (WebDriver) new ChromeDriver();
+		//driver = (WebDriver) new ChromeDriver();
 
+		System.setProperty("webdriver.chrome.driver",
+				System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\chromedriver.exe");
+		driver = (WebDriver) new ChromeDriver();
+		
 	}
 
 	public static void OpenUrl() {
